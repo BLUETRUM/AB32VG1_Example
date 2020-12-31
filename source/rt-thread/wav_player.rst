@@ -16,7 +16,7 @@ rt-thread studio 安装
 
 首先需要确保已经安装 rt-thread studio 
 
-在工具栏找到 SDK 管理器，点击后在弹出窗口，'Board_Support_Packages' -> 'Bluetrum_AB32VG1-ab-prougen' ,勾选，安装资源包，至此可以在rt-thread studio基于AB32VG1做开发了
+在工具栏找到 SDK 管理器，点击后在弹出窗口，** Board_Support_Packages ** -> ** Bluetrum_AB32VG1-ab-prougen ** ,勾选，安装资源包，至此可以在rt-thread studio基于AB32VG1做开发了
 
 .. image:: images/studio_0.png
    :align: center
@@ -35,7 +35,7 @@ Downloader 安装
 .. image:: images/download_error_fix.gif
    :align: center
 
-如何希望能够编译后自动下载，需要在 `Downloader` 中的下载的下拉窗中选择 `自动`
+如何希望能够编译后自动下载，需要在 ** Downloader ** 中的下载的下拉窗中选择 ** 自动 **
 
 .. image:: images/download_1.png
    :align: center
@@ -91,8 +91,11 @@ multibutton 软件包安装
 .. image:: images/wav_player/4.png
    :align: center
 
-软件包选择完成后，点击 保存 按钮，将配置保存并应用到工程中。保存的时候会弹出进度提示框，提示保存进度，会自动下载到 package 目录下。
+
+保存,下载软件包到工程
 ----------------------
+软件包选择完成后，点击 保存 按钮，将配置保存并应用到工程中。保存的时候会弹出进度提示框，提示保存进度，会自动下载到 package 目录下。
+
 
 .. image:: images/studio_5.png
    :align: center
