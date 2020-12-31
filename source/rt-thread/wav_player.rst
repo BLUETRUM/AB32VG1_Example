@@ -8,7 +8,6 @@
 实验前需要下载
 
 + `rt-thread studio 安装包 <https://www.rt-thread.org/page/studio.html>`_ 
-+ `ab32vg11-ab-prougen 离线资源包 <https://gitee.com/bluetrum/Bluetrum_AB32VG1-ab-prougen/tags>`_ 
 + `Downloader(下载软件) <https://gitee.com/bluetrum/Downloader/blob/main/Downloader_v1.9.7.zip>`_ 
 + `配套的 USB 转串口驱动 <https://gitee.com/bluetrum/Downloader/blob/main/CP210x_Windows_Drivers.rar>`_
 
@@ -17,9 +16,7 @@ rt-thread studio 安装
 
 首先需要确保已经安装 rt-thread studio 
 
-然后我们需要导入 ab32vg11-ab-prougen 离线资源包
-
-在工具栏找到 SDK 管理器，点击后在弹出窗口点击`导入资源包`
+在工具栏找到 SDK 管理器，点击后在弹出窗口，`Board_Support_Packages` -> `Bluetrum_AB32VG1-ab-prougen`,勾选，安装资源包
 
 .. image:: images/import_1.png
    :align: center
