@@ -16,20 +16,11 @@ rt-thread studio 安装
 
 首先需要确保已经安装 rt-thread studio 
 
-在工具栏找到 SDK 管理器，点击后在弹出窗口，`Board_Support_Packages` -> `Bluetrum_AB32VG1-ab-prougen`,勾选，安装资源包
+在工具栏找到 SDK 管理器，点击后在弹出窗口，`Board_Support_Packages` -> `Bluetrum_AB32VG1-ab-prougen`,勾选，安装资源包，至此可以在rt-thread studio基于AB32VG1做开发了
 
-.. image:: images/import_1.png
+.. image:: images/studio_0.png
    :align: center
 
-在导入资源包中选择 `Bluetrum_AB32VG1-ab-prougen.zip`
-
-.. image:: images/import_2.png
-   :align: center
-
-导入成功后，就可以在 SDK 管理器中看到导入的 SDK 了
-
-.. image:: images/import_3.png
-   :align: center
 
 Downloader 安装
 ----------------
