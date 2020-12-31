@@ -8,7 +8,6 @@
 实验前需要下载
 
 + `rt-thread studio 安装包 <https://www.rt-thread.org/page/studio.html>`_ 
-+ `ab32vg11-ab-prougen 离线资源包 <https://gitee.com/bluetrum/Bluetrum_AB32VG1-ab-prougen/tags>`_ 
 + `Downloader(下载软件) <https://gitee.com/bluetrum/Downloader/blob/main/Downloader_v1.9.7.zip>`_ 
 + `配套的 USB 转串口驱动 <https://gitee.com/bluetrum/Downloader/blob/main/CP210x_Windows_Drivers.rar>`_
 
@@ -17,27 +16,16 @@ rt-thread studio 安装
 
 首先需要确保已经安装 rt-thread studio 
 
-然后我们需要导入 ab32vg11-ab-prougen 离线资源包
+在工具栏找到 SDK 管理器，点击后在弹出窗口，**Board_Support_Packages** -> **Bluetrum_AB32VG1-ab-prougen** ,勾选，安装资源包，至此可以在rt-thread studio基于AB32VG1做开发了
 
-在工具栏找到 SDK 管理器，点击后在弹出窗口点击`导入资源包`
-
-.. image:: images/import_1.png
+.. image:: images/studio_0.png
    :align: center
 
-在导入资源包中选择 `Bluetrum_AB32VG1-ab-prougen.zip`
-
-.. image:: images/import_2.png
-   :align: center
-
-导入成功后，就可以在 SDK 管理器中看到导入的 SDK 了
-
-.. image:: images/import_3.png
-   :align: center
 
 Downloader 安装
 ----------------
 
-我们是使用 Downloader 进行程序的下载的，这个软件需要安装自己的 USB 转串口驱动，如果驱动不匹配，会报下面的这个错误，这时需要重新安装我们提供的串口的驱动
+我们是使用 Downloader 进行程序的固件下载的，编译出来的固件后缀为.dcf,该文件位于工程Debug目录下。 Downloader 软件需要安装自己的 USB 转串口驱动，如果驱动不匹配，会报下面的这个错误，这时需要安装配套的 USB 转串口驱动 。
 
 .. image:: images/download_0.png
    :align: center
@@ -47,7 +35,7 @@ Downloader 安装
 .. image:: images/download_error_fix.gif
    :align: center
 
-如何希望能够编译后自动下载，需要在 `Downloader` 中的下载的下拉窗中选择 `自动`
+如何希望能够编译后自动下载，需要在 **Downloader** 中的下载的下拉窗中选择 **自动**
 
 .. image:: images/download_1.png
    :align: center
@@ -89,6 +77,8 @@ studio 新建工程
 .. image:: images/wav_player/2.png
    :align: center
 
+也可以通过`更多配置`查看所有软件包来选择个软件包：
+
 wavplayer 软件包安装
 ---------------------
 
@@ -101,14 +91,21 @@ multibutton 软件包安装
 .. image:: images/wav_player/4.png
    :align: center
 
-软件包选择完成后，会自动下载到 package 目录下。
+
+保存,下载软件包到工程
+----------------------
+软件包选择完成后，点击 保存 按钮，将配置保存并应用到工程中。保存的时候会弹出进度提示框，提示保存进度，会自动下载到 package 目录下。
+
+
+.. image:: images/studio_5.png
+   :align: center
 
 demo编写
 ---------
 
 安装完 wavplayer/optparse/multibutton 三个软件包之后，就完成此次试验所需要的依赖的软件包。接下来开始编写demo。
 
-首先需要下载 romfs.c 替换 applications 下原有的 romfs.c 
+首先需要下载 romfs.c（本文件包含了两个音频文件用于demo播放） 替换 applications 下原有的 romfs.c 
 
 :download:`romfs.c <others/romfs.c>`
 
