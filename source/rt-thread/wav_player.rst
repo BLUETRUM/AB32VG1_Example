@@ -77,6 +77,8 @@ studio 新建工程
 .. image:: images/wav_player/2.png
    :align: center
 
+也可以通过`更多配置`查看所有软件包来选择个软件包：
+
 wavplayer 软件包安装
 ---------------------
 
@@ -89,14 +91,16 @@ multibutton 软件包安装
 .. image:: images/wav_player/4.png
    :align: center
 
-软件包选择完成后，会自动下载到 package 目录下。
+软件包选择完成后，点击 保存 按钮，将配置保存并应用到工程中。保存的时候会弹出进度提示框，提示保存进度，会自动下载到 package 目录下。
+.. image:: images/studio_5.png
+   :align: center
 
 demo编写
 ---------
 
 安装完 wavplayer/optparse/multibutton 三个软件包之后，就完成此次试验所需要的依赖的软件包。接下来开始编写demo。
 
-首先需要下载 romfs.c 替换 applications 下原有的 romfs.c 
+首先需要下载 romfs.c（本文件包含了两个音频文件用于demo播放） 替换 applications 下原有的 romfs.c 
 
 :download:`romfs.c <others/romfs.c>`
 
