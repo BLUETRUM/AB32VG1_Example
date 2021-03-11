@@ -2,6 +2,10 @@
 从内部 Flash 读取 WAV 音频播放
 ===============================
 
+这个文档是基于 1.0.1 的 BSP 的，使用新的版本可能存在问题，下面列出一些已知问题的解决方法的链接，后期会更新文档
+
++ https://club.rt-thread.org/ask/article/2595.html
+
 实验准备
 ========
 
@@ -21,6 +25,7 @@ rt-thread studio 安装
 .. image:: images/studio_0.png
    :align: center
 
+还需要在 SDK 管理器中安装 riscv 的工具链，否则无法编译
 
 Downloader 安装
 ----------------
