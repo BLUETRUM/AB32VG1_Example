@@ -27,6 +27,7 @@ AB32VG1 开发板是以中科蓝讯 (Bluetrum) 公司推出的基于 RISC-V 架�
 rt-thread
 ------------
 
-+ :ref:`从内部 Flash 读取 WAV 音频播放` 
++ :ref:`Experiment preparation` 
++ :ref:`从内部Flash读取WAV音频播放` 
 
 
