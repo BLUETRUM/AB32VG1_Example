@@ -6,6 +6,7 @@
 Welcome to AB32VG1_Example's documentation!
 ===========================================
 
+
 .. toctree::
    :maxdepth: 1
    :caption: 介绍
@@ -14,8 +15,13 @@ Welcome to AB32VG1_Example's documentation!
 
 .. toctree::
    :maxdepth: 2
+   :caption: Experiment preparation
+   
+   experiment
+
+.. toctree::
+   :maxdepth: 2
    :caption: RT-Thread
-   :numbered:
 
    rt-thread/wav_player
 
