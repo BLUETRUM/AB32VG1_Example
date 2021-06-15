@@ -15,13 +15,14 @@ Welcome to AB32VG1_Example's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Experiment preparation
+   :caption: 实验准备
    
-   experiment
+   preparation
 
 .. toctree::
    :maxdepth: 2
    :caption: RT-Thread
 
-   rt-thread/wav_player
+   rt-thread/link_file
+   rt-thread/wav_player_rom
 
