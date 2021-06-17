@@ -35,7 +35,6 @@ multibutton 软件包安装
 .. image:: images/wav_player/4.png
    :align: center
 
-
 保存,下载软件包到工程
 ----------------------
 软件包选择完成后，点击 保存 按钮，将配置保存并应用到工程中。保存的时候会弹出进度提示框，提示保存进度，会自动下载到 package 目录下。
@@ -51,6 +50,29 @@ demo编写
 首先需要下载 romfs.c（本文件包含了两个音频文件用于demo播放） 替换 applications 下原有的 romfs.c 
 
 :download:`romfs.c <others/romfs.c>`
+
+检查一下 `mnt.c` 这个文件里的挂载信息，看看是否挂载的是 romfs，不是的话进行下面的修改
+
+.. code-block:: c
+    :linenos:
+
+    #include <dfs_fs.h>
+    #include "dfs_romfs.h"
+
+    int mnt_init(void)
+    {
+        if (dfs_mount(RT_NULL, "/", "rom", 0, &(romfs_root)) == 0)
+        {
+            rt_kprintf("ROM file system initializated!\n");
+        }
+        else
+        {
+            rt_kprintf("ROM file system initializate failed!\n");
+        }
+
+        return 0;
+    }
+    INIT_ENV_EXPORT(mnt_init);
 
 然后在 applications 下新建 event_async.c 文件，复制以下代码
 

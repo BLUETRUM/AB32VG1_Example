@@ -25,4 +25,5 @@ Welcome to AB32VG1_Example's documentation!
 
    rt-thread/link_file
    rt-thread/wav_player_rom
+   rt-thread/faq
 
