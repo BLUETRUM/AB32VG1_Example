@@ -6,8 +6,8 @@
 实验前需要下载
 
 + `rt-thread studio 安装包 <https://www.rt-thread.org/page/studio.html>`_ 
-+ `Downloader(下载软件) <https://gitee.com/bluetrum/Downloader/blob/main/Downloader_v1.9.7.zip>`_ 
-+ `配套的 USB 转串口驱动(V1 版本专用) <https://gitee.com/bluetrum/Downloader/blob/main/CP210x_Windows_Drivers.rar>`_
++ `Downloader(下载软件) <https://gitee.com/bluetrum/AB32VG1_DOC/blob/master/tools/Downloader_v2.2.0.zip>`_ 
++ `配套的 USB 转串口驱动(V1 版本专用) <https://gitee.com/bluetrum/AB32VG1_DOC/blob/master/tools/CP210x_Windows_Drivers.rar>`_
 
 rt-thread studio 安装
 --------------------------
@@ -27,12 +27,16 @@ rt-thread studio 安装
 Downloader 安装
 --------------------
 
-我们是使用 Downloader 进行程序的固件下载的，编译出来的固件后缀为.dcf,该文件位于工程Debug目录下。 Downloader 软件需要安装自己的 USB 转串口驱动，如果驱动不匹配，会报下面的这个错误，这时需要安装配套的 USB 转串口驱动 。
+我们是使用 Downloader 进行程序的固件下载的，编译出来的固件后缀为 .dcf,该文件位于工程Debug目录下。
+
+目前的开发板都是 V2 版本了，V2 版本的开发板使用的串口芯片是 CH340，可以直接使用系统自动安装的驱动。
+
+V1 版本的开发板使用 Downloader 软件，需要安装特定版本的 USB 转串口驱动，如果驱动不匹配，会报下面的这个错误，这时需要安装配套的 USB 转串口驱动 。
 
 .. image:: rt-thread/images/download_0.png
    :align: center
 
-V2 版本的开发板使用的串口芯片是 CH340，可以直接使用系统自动安装的驱动。V1 版本的开发板使用的串口芯片是 CP2102 ，需要切换到我们的驱动，具体操作如下图
+V1 版本的开发板使用的串口芯片是 CP2102 ，需要切换到我们的驱动，具体操作如下图
 
 .. image:: rt-thread/images/download_error_fix.gif
    :align: center

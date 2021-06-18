@@ -8,6 +8,22 @@
 
 最终的工程可以在这里下载 :download:`wav_player_rom.zip <others/wav_player_rom.zip>`
 
+使能相关组件
+------------
+
+需要使用到 Audio 和 dfs 相关的组件
+
+.. image:: images/wav_player/00.png
+   :align: center
+
+.. image:: images/wav_player/01.png
+   :align: center
+
+开启 dfs 的时候会默认开启 posix 的使能，需要关闭 posix 的使能，否则终端的输入会有问题
+
+.. image:: images/wav_player/02.png
+   :align: center
+
 软件包安装
 -----------
 
@@ -24,19 +40,19 @@
 也可以通过`更多配置`查看所有软件包来选择个软件包：
 
 wavplayer 软件包安装
----------------------
+^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/wav_player/3.png
    :align: center
 
 multibutton 软件包安装
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: images/wav_player/4.png
    :align: center
 
 保存,下载软件包到工程
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 软件包选择完成后，点击 保存 按钮，将配置保存并应用到工程中。保存的时候会弹出进度提示框，提示保存进度，会自动下载到 package 目录下。
 
 .. image:: images/studio_5.png
@@ -54,7 +70,6 @@ demo编写
 检查一下 `mnt.c` 这个文件里的挂载信息，看看是否挂载的是 romfs，不是的话进行下面的修改
 
 .. code-block:: c
-    :linenos:
 
     #include <dfs_fs.h>
     #include "dfs_romfs.h"
@@ -77,7 +92,6 @@ demo编写
 然后在 applications 下新建 event_async.c 文件，复制以下代码
 
 .. code-block:: c
-    :linenos:
 
     #include <rtthread.h> 
     #include <rtdevice.h>
@@ -234,7 +248,7 @@ demo编写
 
 demo编写完成后，单击编译按钮开始编译，编译成功后下载编译后生成的 `.dcf` 固件到芯片；
 
-双击打开Downloader v1.9.7。
+双击打开 Downloader v2.2.0。
 
 .. image:: images/wav_player/5.png
    :align: center
