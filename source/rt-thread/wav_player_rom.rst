@@ -4,7 +4,7 @@
 前言
 ------
 
-开始实验前，请先查看 :ref:`Experiment preparation`
+开始实验前，请先查看 :ref:`Experiment preparation`，开发板 SDK 请选择 1.0.7 之后的版本
 
 最终的工程可以在这里下载 :download:`wav_player_rom.zip <others/wav_player_rom.zip>`
 
@@ -19,7 +19,7 @@
 .. image:: images/wav_player/01.png
    :align: center
 
-开启 dfs 的时候会默认开启 posix 的使能，需要关闭 posix 的使能，否则终端的输入会有问题
+开启 dfs 的时候会默认开启 posix 的使能，需要 **关闭 posix 的使能** ，否则终端的输入会有问题
 
 .. image:: images/wav_player/02.png
    :align: center
@@ -63,18 +63,20 @@ demo编写
 
 安装完 wavplayer/optparse/multibutton 三个软件包之后，就完成此次试验所需要的依赖的软件包。接下来开始编写demo。
 
-首先需要下载 romfs.c（本文件包含了两个音频文件用于demo播放） 替换 applications 下原有的 romfs.c 
+下载 romfs.c（本文件包含了两个音频文件用于demo播放） 放置到 applications 下
 
 :download:`romfs.c <others/romfs.c>`
 
-检查一下 `mnt.c` 这个文件里的挂载信息，看看是否挂载的是 romfs，不是的话进行下面的修改
+下载 mnt.c 替换 applications 下原有的文件，从而挂载 romfs，主要代码在下方
+
+:download:`mnt.c <others/mnt.c>`
 
 .. code-block:: c
 
     #include <dfs_fs.h>
     #include "dfs_romfs.h"
 
-    int mnt_init(void)
+    int ab32_romfs_mount(void)
     {
         if (dfs_mount(RT_NULL, "/", "rom", 0, &(romfs_root)) == 0)
         {
@@ -87,7 +89,7 @@ demo编写
 
         return 0;
     }
-    INIT_ENV_EXPORT(mnt_init);
+    INIT_ENV_EXPORT(ab32_romfs_mount);
 
 然后在 applications 下新建 event_async.c 文件，复制以下代码
 
