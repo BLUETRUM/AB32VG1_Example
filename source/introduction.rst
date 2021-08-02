@@ -3,7 +3,7 @@
 
 AB32VG1 开发板是以中科蓝讯 (Bluetrum) 公司推出的基于 RISC-V 架构的高配置芯片 AB32VG1 为核心所组成的。
 
-+ CPU: AB32VG1 (LQFP48 封装，主频 120M ，片上集成 RAM 192K, flash 4Mbit，ADC，PWM，USB，UART，IIC 等资源)
++ CPU: AB32VG1 (LQFP48 封装，主频 120M ，片上集成 RAM 192K, flash 8Mbit，ADC，PWM，USB，UART，IIC 等资源)
 + 搭载蓝牙模块
 + 搭载FM模块
 + 一路 TF Card 接口
